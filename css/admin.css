@@ -1,0 +1,92 @@
+body {
+    background: #f4f6f9;
+    font-family: 'Segoe UI', sans-serif;
+}
+.envoltura {
+    display: flex;
+    min-height: 100vh;
+}
+.barra-lateral {
+    width: 260px;
+    background: #0d6efd;
+    color: white;
+    padding: 20px;
+}
+.barra-lateral h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.barra-lateral a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    transition: .3s;
+}
+.barra-lateral a:hover {
+    background: rgba(255, 255, 255, .15);
+}
+.contenido {
+    flex: 1;
+    padding: 30px;
+}
+.titulo-pagina {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.tarjeta-personalizada {
+    background: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+}
+.table thead {
+    background: #0d6efd;
+    color: white;
+}
+.insignia-personalizada {
+    background: #0d6efd;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.tarjeta-tablero {
+    background: #ffffff;
+    border: 2px solid #dee2e6;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    transition: all 0.3s ease;
+
+    height: 100%;
+}
+
+.tarjeta-tablero:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-color: #0d6efd;
+}
+
+.tarjeta-tablero i {
+    font-size: 2.5rem;
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+.tarjeta-tablero h6 {
+    color: #6c757d;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.tarjeta-tablero h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #212529;
+}
