@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACKTRACK - Panel Cliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body{
+            background:#f5f7fa;
+        }
+        .navbar-brand{
+            font-weight:bold;
+        }
+        .tarjeta-bienvenida{
+            background:linear-gradient(
+                135deg,
+                #0d6efd,
+                #084298
+            );
+            color:white;
+            border-radius:15px;
+        }
+        .tarjeta-animada{
+            transition:.3s;
+        }
+        .tarjeta-animada:hover{
+            transform:translateY(-5px);
+        }
+        .icono-grande{
+            font-size:40px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-send-fill"></i>
+                PACKTRACK
+            </a>
+            <div class="ms-auto d-flex align-items-center">
+                <span
+                    id="nombreUsuario"
+                    class="text-white me-3 fw-bold">
+                </span>
+                <button
+                    class="btn btn-danger"
+                    onclick="logout()">
+                    Cerrar Sesión
+                </button>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="tarjeta-bienvenida p-4 shadow">
+            <h2>
+                Bienvenido
+                <span id="nombreBienvenida"></span>
+            </h2>
+            <p class="mb-0">
+                Desde aquí podrás gestionar tus paquetes y consultas.
+            </p>
+        </div>
+        <div class="row mt-4 g-4">
+            <div class="col-md-4">
+                <div class="card shadow tarjeta-animada">
+                    <div class="card-body text-center">
+                        <i class="bi bi-box-seam icono-grande text-primary"></i>
+                        <h3
+                            id="totalPaquetes"
+                            class="mt-2">
+                            0
+                        </h3>
+                        <p>
+                            Mis Paquetes
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow tarjeta-animada">
+                    <div class="card-body text-center">
+                        <i class="bi bi-truck icono-grande text-success"></i>
+                        <h3
+                            id="enTransito">
+                            0
+                        </h3>
+                        <p>
+                            En Tránsito
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card shadow tarjeta-animada">
+                    <div class="card-body text-center">
+                        <i class="bi bi-check-circle icono-grande text-warning"></i>
+                        <h3
+                            id="entregados">
+                            0
+                        </h3>
+                        <p>Entregados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 g-4">
+            <div class="col-md-4">
+                <a href="mis-paquetes.html"
+                   class="text-decoration-none">
+                    <div class="card shadow tarjeta-animada">
+                        <div class="card-body text-center">
+                            <i class="bi bi-box icono-grande text-primary"></i>
+                            <h5 class="mt-3">
+                                Ver Mis Paquetes
+                            </h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="mis-consultas.html"
+                   class="text-decoration-none">
+                    <div class="card shadow tarjeta-animada">
+                        <div class="card-body text-center">
+                            <i class="bi bi-chat-dots icono-grande text-success"></i>
+                            <h5 class="mt-3">
+                                Mis Consultas
+                            </h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="perfil.html"
+                   class="text-decoration-none">
+                    <div class="card shadow tarjeta-animada">
+                        <div class="card-body text-center">
+                            <i class="bi bi-person-circle icono-grande text-warning"></i>
+                            <h5 class="mt-3">
+                                Mi Perfil
+                            </h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="card shadow mt-5">
+            <div class="card-header bg-primary text-white">
+                Últimos Paquetes
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Título</th>
+                                <th>Origen</th>
+                                <th>Destino</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaPaquetes">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/cliente/cliente-dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
