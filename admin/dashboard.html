@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | PACKTRACK</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div class="envoltura">
+    <aside class="barra-lateral">
+        <div>
+            <div class="contenedor-logo">
+
+                <div class="icono-logo">
+                    <i class="bi bi-send-fill"></i>
+                </div>
+
+                <h3>PACKTRACK</h3>
+                <p>Sistema de Seguimiento</p>
+
+            </div>
+            <nav>
+                <a href="dashboard.html" class="activo">
+                    <i class="bi bi-speedometer2"></i>
+                    Tablero
+                </a>
+                <a href="paquetes.html">
+                    <i class="bi bi-box-seam"></i>
+                    Paquetes
+                </a>
+                <a href="consultas.html">
+                    <i class="bi bi-chat-left-text"></i>
+                    Consultas
+                </a>
+                <a href="sucursales.html">
+                    <i class="bi bi-building"></i>
+                    Sucursales
+                </a>
+                <a href="seguimientos.html">
+                    <i class="bi bi-geo-alt"></i>
+                    Seguimientos
+                </a>
+            </nav>
+        </div>
+        <button class="btn btn-danger w-100" onclick="logout()">
+            <i class="bi bi-box-arrow-right"></i>
+            Cerrar Sesión
+        </button>
+    </aside>
+    <main class="contenido">
+        <div class="barra-superior">
+            <div>
+                <h2>Dashboard Administrativo</h2>
+                <span id="fechaActual"></span>
+            </div>
+            <div class="usuario">
+                <i class="bi bi-person-circle"></i>
+                <span id="usuarioNombre"></span>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4" >
+                <div class="tarjeta-tablero " >
+                    <i class="bi bi-people-fill"></i>
+                    <h6>Usuarios</h6>
+                    <h2 id="usuarios">0</h2>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tarjeta-tablero">
+                    <i class="bi bi-box-fill"></i>
+                    <h6>Paquetes</h6>
+                    <h2 id="paquetes">0</h2>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="tarjeta-tablero">
+                    <i class="bi bi-chat-dots-fill"></i>
+                    <h6>Consultas Pendientes</h6>
+                    <h2 id="consultasPendientes">0</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 mt-2">
+            <div class="col-md-3">
+                <div class="tarjeta-tablero">
+                    <h6>Registrados</h6>
+                    <h2 id="registrados">0</h2>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="tarjeta-tablero">
+                    <h6>En Tránsito</h6>
+                    <h2 id="transito">0</h2>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="tarjeta-tablero">
+                    <h6>En Reparto</h6>
+                    <h2 id="reparto">0</h2>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="tarjeta-tablero">
+                    <h6>Entregados</h6>
+                    <h2 id="entregados">0</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<script src="../js/admin/dashboard.js"></script>
+</body>
+</html>

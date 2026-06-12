@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimientos - PACKTRACK</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+
+<div class="d-flex">
+
+    <aside class="barra-lateral">
+
+        <div>
+
+            <div class="contenedor-logo">
+
+                <div class="icono-logo">
+                    <i class="bi bi-send-fill"></i>
+                </div>
+
+                <h3>PACKTRACK</h3>
+                <p>Sistema de Seguimiento</p>
+
+            </div>
+
+            <nav>
+
+                <a href="dashboard.html">
+                    <i class="bi bi-speedometer2"></i>
+                    Tablero
+                </a>
+
+                <a href="paquetes.html">
+                    <i class="bi bi-box-seam"></i>
+                    Paquetes
+                </a>
+
+                <a href="consultas.html">
+                    <i class="bi bi-chat-left-text"></i>
+                    Consultas
+                </a>
+
+                <a href="sucursales.html">
+                    <i class="bi bi-building"></i>
+                    Sucursales
+                </a>
+
+                <a href="seguimientos.html" class="activo">
+                    <i class="bi bi-geo-alt"></i>
+                    Seguimientos
+                </a>
+
+            </nav>
+
+        </div>
+
+    </aside>
+
+    <main class="contenido p-4 flex-grow-1">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <div>
+
+                <h2>
+                    Gestión de Seguimientos
+                </h2>
+
+                <p class="text-muted mb-0">
+                    Historial de movimientos de paquetes
+                </p>
+
+            </div>
+
+            <button
+                class="btn btn-primary"
+                onclick="cargarSeguimientos()">
+
+                <i class="bi bi-arrow-clockwise"></i>
+                Actualizar
+
+            </button>
+
+        </div>
+
+        <div class="card shadow-sm">
+
+            <div class="card-header">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <input
+                            type="text"
+                            id="buscarSeguimiento"
+                            class="form-control"
+                            placeholder="Buscar código o ubicación">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle">
+
+                        <thead class="table-dark">
+
+                            <tr>
+                                <th>ID</th>
+                                <th>Código</th>
+                                <th>Paquete</th>
+                                <th>Estado</th>
+                                <th>Ubicación</th>
+                                <th>Observación</th>
+                                <th>Fecha</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tablaSeguimientos">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/admin/seguimientos.js"></script>
+
+</body>
+</html>
